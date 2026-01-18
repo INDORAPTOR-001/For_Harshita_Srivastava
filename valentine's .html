@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Harshita Srivastava ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;font-family:"Segoe UI",sans-serif;background:linear-gradient(135deg,#ff9a9e,#fad0c4);overflow:hidden;}
+.page{position:absolute;inset:0;display:none;justify-content:center;align-items:center;text-align:center;padding:20px;}
+.page.active{display:flex;animation:fade 0.6s ease;}
+@keyframes fade{from{opacity:0;transform:scale(0.95);}to{opacity:1;transform:scale(1);}}
+.card{background:white;padding:30px;border-radius:22px;max-width:440px;box-shadow:0 20px 45px rgba(0,0,0,0.25);}
+h1{color:#ff4d6d;} p, pre{font-size:18px;line-height:1.6;}
+button{margin-top:18px;padding:12px 26px;border:none;border-radius:30px;background:#ff4d6d;color:white;font-size:16px;cursor:pointer;}
+button.secondary{background:#ffb3c1;color:#333;}
+#muteBtn{position:fixed;top:12px;right:12px;background:rgba(255,255,255,0.85);color:#ff4d6d;border-radius:50%;width:44px;height:44px;font-size:18px;box-shadow:0 6px 15px rgba(0,0,0,0.2);}
+.type{min-height:60px;}
+.float{position:fixed;top:-40px;font-size:26px;animation:fall linear infinite;pointer-events:none;}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg);}}
+.tap-heart{position:fixed;font-size:20px;animation:tapFloat 1.5s ease forwards;pointer-events:none;}
+@keyframes tapFloat{from{opacity:1;transform:translateY(0) scale(1);}to{opacity:0;transform:translateY(-60px) scale(1.4);}}
+.heart-bouquet{position:relative;width:260px;height:280px;margin:20px auto;}
+.bouquet-wrap{position:absolute;width:200px;height:160px;background:linear-gradient(135deg,#ff4d5a,#c1121f);clip-path: polygon(15% 0, 85% 0, 55% 100%, 45% 100%);border-radius:0 0 120px 120px;animation:wrapSway 2s ease-in-out infinite alternate;z-index:0;box-shadow:0 10px 18px rgba(0,0,0,0.25);}
+@keyframes wrapSway{0%{transform:translateX(-50%) rotate(-2deg);}100%{transform:translateX(-50%) rotate(2deg);}}
+img.bouquet-img{position:absolute;width:70px;border-radius:14px;box-shadow:0 8px 15px rgba(0,0,0,0.2);animation:pulse 3s ease-in-out infinite;z-index:2;}
+@keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.05);}}
+</style>
+</head>
+<body>
+
+<button id="muteBtn" onclick="toggleMusic()">🔊</button>
+<audio id="music" loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Pages -->
+<div class="page active" id="p1"><div class="card"><h1>Hey Harshita 🌹</h1><p>I made something just justtt justtt for youuuuuuuu.</p><button onclick="next(true)">Continue 💌</button></div></div>
+
+<div class="page" id="p2"><div class="card"><div id="typeText" class="type"></div><button onclick="next()">Next ❤️</button></div></div>
+
+<div class="page" id="p3"><div class="card">
+<p>Okay, here it is...<br>I really really reeeeally loveee you 🥺</p>
+<p><strong>Will you be my Valentine?</strong> 💖</p>
+<button onclick="yesClick()">Yes 😊</button>
+<button id="noBtn" class="secondary">Not sure yet 🙂</button>
+</div></div>
+
+<div class="page" id="p4"><div class="card"><h1>YAYAYYY 😁</h1><p>IM THE HAPPIEST MAN ALIVEEE 💖<br>I LOVE YOUUU</p><button onclick="next()">Next 🌸</button></div></div>
+
+<div class="page" id="p5"><div class="card"><h1>Sweet reminder 🌸</h1><div id="sweetText" class="type"></div><button onclick="next()">Next 💖</button></div></div>
+
+<div class="page" id="p6">
+  <div class="card">
+    <h1>Heart bouquet 🌹</h1>
+    <div class="heart-bouquet" id="bouquet"></div>
+    <button onclick="next()">Next 💌</button>
+  </div>
+</div>
+
+<div class="page" id="p7"><div class="card"><h1>Confetti time 🎉</h1><p>Thanks for being amazing ❤️</p><button onclick="next()">Next 💖</button></div></div>
+
+<div class="page" id="p8"><div class="card"><h1>Poem – This is for you, love</h1><pre style="text-align:left;">A love that I can’t explain
+A feeling I can barely contain
+My heart so full of emotion
+My feelings, so often in motion
+
+It’s like a sweet summer’s breeze
+Weaving through the trees
+Bringing with it a gentle calm
+A feeling that can do no harm
+
+The way it fills me with joy
+As if I’m a new found toy
+My heart so full of bliss
+I’m at a complete loss for words
+
+The perfect love for me
+Is the one that sets me free
+Where I can be myself
+And know that I’m loved for me
+
+Your love is like a warm embrace
+Filling me with grace
+Your kindness shines so bright
+That I am filled with delight
+
+Your love so full of life
+It’s like a never-ending light
+It brings me comfort and peace
+A feeling that will never cease</pre><button onclick="next()">Next 🌙</button></div></div>
+
+<div class="page" id="p9"><div class="card"><h1>The moon is beautiful, isn't it? 🌕</h1>
+<img src="moon.jpg" style="width:180px;border-radius:12px;margin-top:12px;">
+<p>(Are you nerdy enough to understand this?)</p>
+<button onclick="next()">Next 💖</button></div></div>
+
+<div class="page" id="p10"><div class="card">
+<p>With all my love,<br>
+Your lovingly, Indoraaaa / Mr. NRI / Mr. Angreez 💖</p>
+<button onclick="next()">Next 🔁</button>
+</div></div>
+
+<div class="page" id="p11"><div class="card"><h1>Replay?</h1><button onclick="replay()">Replay 🔁</button></div></div>
+
+<div class="page" id="heartbreak"><div class="card"><h1>You broke my heart 💔🥀</h1><button onclick="replay()">Try again 🔁</button></div></div>
+
+<script>
+let current=1,i=0,j=0,hoverCount=0;
+const music=document.getElementById("music");
+const muteBtn=document.getElementById("muteBtn");
+const typingLine="You're in my mind 24/7. Not occasionally. Just always.";
+const sweetLine="Thinking of you makes my heart skip a beat ❤️💓";
+
+function next(startMusic=false){
+  document.getElementById("p"+current).classList.remove("active");
+  current++;
+  if(current>11) current=11;
+  document.getElementById("p"+current).classList.add("active");
+  if(startMusic) music.play();
+  if(current===2) typeEffect();
+  if(current===5) sweetEffect();
+  if(current===6) loadBouquet();
+}
+
+function typeEffect(){if(i<typingLine.length){document.getElementById("typeText").innerHTML+=typingLine.charAt(i);i++;setTimeout(typeEffect,40);}}
+function sweetEffect(){if(j<sweetLine.length){document.getElementById("sweetText").innerHTML+=sweetLine.charAt(j);j++;setTimeout(sweetEffect,40);}}
+function toggleMusic(){if(music.paused){music.play(); muteBtn.textContent="🔊";}else{music.pause(); muteBtn.textContent="🔇";}}
+function replay(){location.reload();}
+
+// Heart trail
+document.addEventListener("click",(e)=>{
+  const h=document.createElement("div");h.className="tap-heart";h.textContent="❤️";
+  h.style.left=e.clientX+"px"; h.style.top=e.clientY+"px";
+  document.body.appendChild(h); setTimeout(()=>h.remove(),1500);
+});
+
+// Floating hearts/roses
+const icons=["❤️","🌹"];
+for(let k=0;k<35;k++){const f=document.createElement("div");f.className="float";f.innerText=icons[Math.floor(Math.random()*2)];f.style.left=Math.random()*100+"vw";f.style.animationDuration=(5+Math.random()*6)+"s";document.body.appendChild(f);}
+
+// Yes click
+function yesClick(){next();}
+
+// Not sure yet button dodge 30 times, 31st → heartbreak
+const noBtn=document.getElementById("noBtn");
+if(noBtn){
+  noBtn.addEventListener("mouseenter", ()=>{
+    hoverCount++;
+    if(hoverCount>30){
+      document.getElementById("p"+current).classList.remove("active");
+      document.getElementById("heartbreak").classList.add("active");
+    } else {
+      const x=Math.random()*60+10;
+      const y=Math.random()*60+10;
+      noBtn.style.position="absolute";
+      noBtn.style.left=x+"%";
+      noBtn.style.top=y+"%";
+    }
+  });
+}
+
+// Bouquet
+function loadBouquet(){
+  const bouquet=document.getElementById("bouquet");
+  bouquet.innerHTML="";
+  const pics=["pic1.jpg","pic2.jpg","pic3.jpg","pic4.jpg","pic5.jpg"];
+  const positions=[
+    {top:0,left:95},
+    {top:60,left:30},
+    {top:60,left:160},
+    {top:120,left:55},
+    {top:120,left:130}
+  ];
+  let maxBottom=0;
+  for(let i=0;i<pics.length;i++){
+    const img=document.createElement("img");
+    img.src=pics[i];
+    img.className="bouquet-img";
+    img.style.top=positions[i].top+"px";
+    img.style.left=positions[i].left+"px";
+    img.style.transformOrigin="50% 50%";
+    img.style.animationDelay=(i*0.2)+"s";
+    bouquet.appendChild(img);
+    let bottom=positions[i].top+70;
+    if(bottom>maxBottom) maxBottom=bottom;
+  }
+  const wrap=document.createElement("div");
+  wrap.className="bouquet-wrap";
+  wrap.style.left="50%";
+  wrap.style.transform="translateX(-50%)";
+  wrap.style.top=maxBottom+"px";
+  bouquet.appendChild(wrap);
+}
+</script>
+</body>
+</html>
